@@ -1,0 +1,60 @@
+# =========================
+# OS: macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails y metadata
+._*
+.Spotlight-V100
+.Trashes
+
+# =========================
+# OS: Windows
+# =========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# =========================
+# Archivos temporales / editores
+# =========================
+*~
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# JetBrains (opcional)
+.idea/
+
+# =========================
+# Logs / temporales generales
+# =========================
+*.log
+*.tmp
+*.bak
+
+# =========================
+# Node (solo si usas reveal-md u otras tools)
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Build output (por si agregas tooling luego)
+# =========================
+dist/
+build/
+
+# =========================
+# Jekyll (solo si llegas a usarlo)
+# =========================
+_site/
+.jekyll-cache/
+.jekyll-metadata
