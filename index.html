@@ -6,140 +6,294 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    :root {
+      --ucu-blue: #143361;
+      --ucu-blue-dark: #10294d;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --line: #d7dce3;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --link: #143361;
+      --maxw: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      max-width: 900px;
-      margin: 2rem auto;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: var(--ucu-blue);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .topbar-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
       padding: 0 1rem;
-      line-height: 1.5;
-      background: #fafafa;
-      color: #222;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-height: 64px;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+    .topbar img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      flex: 0 0 auto;
     }
 
-    h2 {
-      margin-top: 2rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3rem;
+    .site-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.1px;
     }
 
-    p {
-      margin: 0.5rem 0;
+    .tabs {
+      background: var(--ucu-blue-dark);
     }
 
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 1rem 0;
+    .tabs-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      gap: 1.2rem;
+      min-height: 44px;
+      align-items: center;
+      overflow-x: auto;
     }
 
-    a {
+    .tabs a {
+      color: rgba(255,255,255,.92);
       text-decoration: none;
-      color: #0a58ca;
+      font-size: 0.95rem;
+      white-space: nowrap;
     }
 
-    a:hover {
+    .tabs a:hover {
       text-decoration: underline;
     }
 
-    .meta {
-      font-size: 0.9rem;
-      color: #555;
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
     }
 
-    .header {
-      margin-bottom: 2rem;
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.5rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+    }
+
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: var(--ucu-blue);
+    }
+
+    .lead {
+      margin: 0.6rem 0 0;
+      max-width: 70ch;
+      color: var(--text);
+    }
+
+    .quicklinks {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.65rem 0.95rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--ucu-blue);
+    }
+
+    .button.primary {
+      background: var(--ucu-blue);
+      color: #fff;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--ucu-blue);
+    }
+
+    .section-title {
+      margin: 2rem 0 0.8rem;
+      font-size: 1.35rem;
+      color: var(--ucu-blue);
+    }
+
+    .section-note {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1rem 0.95rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+      color: var(--ucu-blue);
+    }
+
+    .card p {
+      margin: 0.35rem 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .card a.deck-link {
+      text-decoration: none;
+      color: var(--ucu-blue);
+      font-weight: 600;
+    }
+
+    .card a.deck-link:hover {
+      text-decoration: underline;
     }
 
     .footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #666;
-      border-top: 1px solid #ddd;
+      margin-top: 2.5rem;
       padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="header">
-    <h1>Fundamentos en Ciencias de la Computación</h1>
-    <p><strong>Facultad de Ingeniería y Tecnologías</strong></p>
-    <p class="meta">
-      Presentaciones utilizadas en el curso.  
-      El material teórico se encuentra en el repositorio de conceptos.
-    </p>
-    <p>
-      <a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos">
-        Ver material de lectura (Conceptos)
-      </a>
-    </p>
-  </div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <img src="logo.png" alt="UCU">
+      <div class="site-title">Fundamentos en Ciencias de la Computación</div>
+    </div>
+  </header>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 01 -->
-  <!-- ===================== -->
-  <h2>Unidad 01</h2>
-  <p class="meta">Próximamente</p>
+  <nav class="tabs" aria-label="Navegación principal">
+    <div class="tabs-inner">
+      <a href="./">Inicio</a>
+      <a href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/">Conceptos</a>
+      <a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones">Repositorio</a>
+      <a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos">Repo conceptos</a>
+    </div>
+  </nav>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 02 -->
-  <!-- ===================== -->
-  <h2>Unidad 02</h2>
-  <p class="meta">Próximamente</p>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Universidad Católica del Uruguay · Facultad de Ingeniería y Tecnologías</p>
+      <h1>Presentaciones del curso</h1>
+      <p class="lead">
+        Este sitio reúne las presentaciones utilizadas en la asignatura
+        <strong>Fundamentos en Ciencias de la Computación</strong>. Como complemento,
+        el material conceptual y de lectura se publica en el sitio de
+        <strong>Conceptos</strong>.
+      </p>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 03 -->
-  <!-- ===================== -->
-  <h2>Unidad 03 — Shell y Scripts</h2>
+      <div class="quicklinks">
+        <a class="button primary" href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/">
+          Ir a Conceptos
+        </a>
+        <a class="button secondary" href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones">
+          Ver repositorio
+        </a>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>
-      <a href="unidad03/slides_u3-shell-bash/">
-        Introducción a Shell y Scripts
-      </a>
-    </h3>
+    <section>
+      <h2 class="section-title">Unidades</h2>
+      <p class="section-note">
+        Las presentaciones se organizan siguiendo la misma estructura general del material conceptual del curso, que actualmente se compone de seis unidades. :contentReference[oaicite:6]{index=6}
+      </p>
 
-    <p>
-      Conceptos básicos de shell, variables de entorno y scripts en sistemas Linux/MacOS y Windows.
-    </p>
+      <div class="grid">
+        <article class="card">
+          <h3>Unidad 01 - Ser Ingeniero/a en el Siglo XXI</h3>
+          <p class="meta">Próximamente</p>
+        </article>
 
-    <p class="meta">
-      Incluye ejemplos en Bash y PowerShell.
-    </p>
-  </div>
+        <article class="card">
+          <h3>Unidad 02 - Orígenes y Fundamentos Computacionales</h3>
+          <p class="meta">Próximamente</p>
+        </article>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 04 -->
-  <!-- ===================== -->
-  <h2>Unidad 04</h2>
-  <p class="meta">Próximamente</p>
+        <article class="card">
+          <h3>Unidad 03 — Sistemas y Herramientas para la Ingeniería</h3>
+          <p>
+            <a class="deck-link" href="unidad03/slides_u3-shell-bash/">
+              Introducción a Shell y Scripts
+            </a>
+          </p>
+          <p>Shell, variables de entorno y scripts en Linux/MacOS y Windows.</p>
+          <p class="meta">Incluye ejemplos en Bash y PowerShell.</p>
+        </article>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 05 -->
-  <!-- ===================== -->
-  <h2>Unidad 05</h2>
-  <p class="meta">Próximamente</p>
+        <article class="card">
+          <h3>Unidad 04 - Pensar en Estructuras y Procesos</h3>
+          <p class="meta">Próximamente</p>
+        </article>
 
-  <!-- ===================== -->
-  <!-- UNIDAD 06 -->
-  <!-- ===================== -->
-  <h2>Unidad 06</h2>
-  <p class="meta">Próximamente</p>
+        <article class="card">
+          <h3>Unidad 05 - Alfabetización en Inteligencia Artificial</h3>
+          <p class="meta">Próximamente</p>
+        </article>
 
-  <div class="footer">
-    <p>
-      Repositorio de presentaciones del curso.  
-      Uso académico.
-    </p>
-  </div>
+        <article class="card">
+          <h3>Unidad 06 - Construcción de Soluciones y Trayectorias Profesionales</h3>
+          <p class="meta">Próximamente</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Sitio de presentaciones del curso. Publicación estática en GitHub Pages.
+    </footer>
+  </main>
 
 </body>
 </html>

@@ -7,18 +7,20 @@
 </div>
 
 # Universidad Católica del Uruguay
-
 ## Facultad de Ingeniería y Tecnologías
-
-### Fundamentos en Ciencias de la Computación - Presentaciones
+### Fundamentos en Ciencias de la Computación
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-Este repositorio contiene las presentaciones utilizadas en clase, exportadas en formato HTML (reveal.js), listas para su visualización directa en navegador.
+Este repositorio reúne el material conceptual y de lectura de la asignatura **Fundamentos en Ciencias de la Computación**, correspondiente a las carreras **Ingeniería en Informática** e **Ingeniería en Inteligencia Artificial y Ciencia de Datos**.
 
-El material de lectura, desarrollo teórico y contenido conceptual se encuentra en el repositorio complementario:
+> **Acceso en línea**
+>
+> Sitio del curso: [Fundamentos en Ciencias de la Computación](https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/)
 
-👉 https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos
+Como complemento visual del curso, las presentaciones utilizadas en clase se publican en el repositorio:
+
+[Fundamentos_Ciencias_Computacion_Presentaciones](https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones)
 
 ---
 
@@ -26,7 +28,4 @@ El material de lectura, desarrollo teórico y contenido conceptual se encuentra 
 
 Cada presentación se organiza por tema o unidad, manteniendo la exportación completa generada desde [Slides.com](https://slides.com).
 
-Las presentaciones pueden visualizarse directamente desde GitHub Pages:
-    
-[sitio - pages](https:// )
 
