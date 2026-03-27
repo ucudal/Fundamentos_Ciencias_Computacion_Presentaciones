@@ -112,7 +112,6 @@
 
     .lead {
       margin: 0.6rem 0 0;
-      max-width: 70ch;
       color: var(--text);
     }
 
@@ -198,6 +197,82 @@
       color: var(--muted);
       font-size: 0.92rem;
     }
+    
+    .tabs-inner a {
+      display: flex;
+      align-items: center;
+    }
+
+.unit-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.unit-header {
+  background: var(--ucu-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+  padding: 0.85rem 1rem;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+}
+
+.deck-card {
+  display: block;
+  padding: 0.95rem 1rem 0.9rem;
+  text-decoration: none;
+  color: inherit;
+  border-top: 1px solid var(--line);
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.deck-card:hover {
+  background: #f8fafc;
+  transform: translateX(4px);
+}
+
+.deck-card:focus-visible {
+  outline: 2px solid var(--ucu-blue);
+  outline-offset: -2px;
+}
+
+.deck-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--ucu-blue);
+}
+
+.deck-card .desc {
+  margin: 0.3rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.deck-card .meta {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.deck-card::after {
+  content: "→";
+  float: right;
+  color: var(--muted);
+  font-weight: 600;
+  margin-left: 0.75rem;
+}
+
 
     @media (max-width: 640px) {
       h1 {
@@ -215,21 +290,25 @@
     </div>
   </header>
 
-  <nav class="tabs" aria-label="Navegación principal">
-    <div class="tabs-inner">
-      <a href="./">Inicio</a>
-      <a href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/">Material del curso</a>
-      
-<a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones" target="_blank">
-  <img src="https://img.shields.io/github/stars/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones?style=social" alt="GitHub repo">
-</a>
+<nav class="tabs" aria-label="Navegación principal">
+  <div class="tabs-inner">
 
-<a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos" target="_blank">
-  <img src="https://img.shields.io/github/stars/ucudal/Fundamentos_Ciencias_Computacion_Conceptos?style=social" alt="GitHub repo conceptos">
-</a>
+    <a href="./">Inicio</a>
 
-    </div>
-  </nav>
+    <a href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/">
+      Conceptos
+    </a>
+
+    <a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones" target="_blank">
+      <img src="https://img.shields.io/github/stars/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones?style=social&label=Presentaciones">
+    </a>
+
+    <a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos" target="_blank">
+      <img src="https://img.shields.io/github/stars/ucudal/Fundamentos_Ciencias_Computacion_Conceptos?style=social&label=Conceptos">
+    </a>
+
+  </div>
+</nav>
 
   <main class="container">
     <section class="hero">
@@ -242,11 +321,6 @@
         <strong>Conceptos</strong>.
       </p>
 
-      <div class="quicklinks">
-        <a class="button primary" href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/">
-          Ir a Conceptos
-        </a>
-      </div>
     </section>
 
     <section>
@@ -256,43 +330,119 @@
       </p>
 
       <div class="grid">
-        <article class="card">
-          <h3>Unidad 01 - Ser Ingeniero/a en el Siglo XXI</h3>
-          <p class="meta">Próximamente</p>
-        </article>
 
-        <article class="card">
-          <h3>Unidad 02 - Orígenes y Fundamentos Computacionales</h3>
-          <p class="meta">Próximamente</p>
-        </article>
+<!-- UNIDAD 01 -->
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 01 - Ser Ingeniero/a en el Siglo XXI
+  </header>
 
-        <article class="card">
-          <h3>Unidad 03 — Sistemas y Herramientas para la Ingeniería</h3>
-          <p>
-            <a class="deck-link" href="unidad03/slides_u3-shell-bash/">
-              I. Introducción a Shell y Scripts
-            </a>
-          </p>
-          <p>Shell, variables de entorno y scripts en Linux/MacOS y Windows.</p>
-          <p class="meta">Incluye ejemplos en Bash y PowerShell.</p>
-        </article>
+  <div class="deck">
+    <a href="unidad01/slides_u1-ser-ingeniero-sxxi/" class="deck-card">
+      <h4>I. Ser Ingeniero/a en el Siglo XXI</h4>
+      <p class="desc">Rol, ética, trayectorias, impacto social</p>
+      <p class="meta">La tecnología no es solo técnica, tambien es social</p>
+    </a>
+  </div>
+</article>       
+
+<!-- UNIDAD 02 -->  
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 02 — Orígenes y Fundamentos Computacionales
+  </header>
+
+  <div class="deck">
+    <a href="unidad02/slides_u2-origenes-historicos/" class="deck-card">
+      <h4>I. Orígenes históricos</h4>
+      <p class="desc">Precursores, computadoras, programas, arquitecturas</p>
+      <p class="meta">Arquitectura von Neumann</p>
+    </a>
+
+    <a href="unidad02/slides_u2-sistemas-numeracion-sistema-binario/" class="deck-card">
+      <h4>II. Sistemas de numeración</h4>
+      <p class="desc">Representación y base, sistema binario, conversión</p>
+      <p class="meta">De decimal a binario</p>
+    </a>
+
+    <a href="unidad02/slides_u2-representacion-informacion-computadoras/" class="deck-card">
+      <h4>III. Representación de la información</h4>
+      <p class="desc">Sistema hexadecimal, ASCII, información digital</p>
+      <p class="meta">Medicion de la información</p>
+    </a>
+    
+    <a href="unidad02/slides_u2-operaciones-sistema-binario/" class="deck-card">
+      <h4>IV. Operaciones en sistema binario</h4>
+      <p class="desc">Operaciones, overflow, números negativos</p>
+      <p class="meta">Las computadoras calculan pero tienen límites</p>
+    </a>
+    
+  </div>
+</article>     
+
+
+<!-- UNIDAD 03 -->
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 03 — Sistemas y Herramientas para la Ingeniería
+  </header>
+
+  <div class="deck">
+    <a href="unidad03/slides_u3-shell-bash/" class="deck-card">
+      <h4>I. Shell y Bash: comandos, path y scripts básicos</h4>
+      <p class="desc">Shell, variables de entorno y scripts en Linux/MacOS y Windows</p>
+      <p class="meta">Incluye ejemplos en Bash y PowerShell</p>
+    </a>
+  </div>
+</article>      
         
-        <article class="card">
-          <h3>Unidad 04 - Pensar en Estructuras y Procesos</h3>
-          <p class="meta">Próximamente</p>
-        </article>
+        
+<!-- UNIDAD 04 -->
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 04 - Pensar en Estructuras y Procesos
+  </header>
 
-        <article class="card">
-          <h3>Unidad 05 - Alfabetización en Inteligencia Artificial</h3>
-          <p class="meta">Próximamente</p>
-        </article>
+  <div class="deck">
+    <a href="" class="deck-card">
+      <h4>Proximamente</h4>
+      <p class="desc"></p>
+      <p class="meta"></p>
+    </a>
+  </div>
+</article> 
 
-        <article class="card">
-          <h3>Unidad 06 - Construcción de Soluciones y Trayectorias Profesionales</h3>
-          <p class="meta">Próximamente</p>
-        </article>
-      </div>
-    </section>
+<!-- UNIDAD 05 -->
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 05 - Alfabetización en Inteligencia Artificial
+  </header>
+
+  <div class="deck">
+    <a href="" class="deck-card">
+      <h4>Proximamente</h4>
+      <p class="desc"></p>
+      <p class="meta"></p>
+    </a>
+  </div>
+</article> 
+
+<!-- UNIDAD 06 -->
+<article class="unit-card">
+  <header class="unit-header">
+    Unidad 06 - Construcción de Soluciones y Trayectorias Profesionales
+  </header>
+
+  <div class="deck">
+    <a href="" class="deck-card">
+      <h4>Proximamente</h4>
+      <p class="desc"></p>
+      <p class="meta"></p>
+    </a>
+  </div>
+</article>        
+
+</div>
 
     <footer class="footer">
       Sitio de presentaciones del curso. Publicación estática en GitHub Pages.

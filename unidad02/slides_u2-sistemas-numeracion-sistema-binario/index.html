@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "U2: Sistemas de numeración y sistema binario"}' />
+		<title>U2: Sistemas de numeración y sistema binario</title>
+
+		<meta name="description" content="Template">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="acbff9fdada20c827770ff06d428b66f"><section data-background="#173363" data-id="7c9a0b417edb410151601d73437a524f"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 288.5px;" data-block-id="f353a1a8cdb204b22eaca9742c8f7f5e" data-name="Text 1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10; color: rgb(238, 238, 238);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Unidad 2</h1></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="28882145bb587cdb84d03c828b253158"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 12;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-origin-id="92bd891438b0f7ba725db43f7c8ed476" data-block-id="0ad7dd4054f908b473daa2806894dfd9" data-name="Text 3">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-origin-id="54d0e1f2ddb2d4aa97b2717f0fcde9d1" data-block-id="f1fe35a3b36cfb17f7a2042b63f5473d"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 129px; top: 383px;" data-name="Text 4" data-block-id="8cea674ae85853d0356bffb3f9ce4487">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 15; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Sistemas de numeración</h2></div>
+						</div></section><section data-id="39f1f37a52f2adf680dc96ec00feabb7"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245.5px;" data-block-id="af7ab1f62795dabb041b7e39bab7450d">
+							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Objetivo de la clase</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 308.5px;" data-block-id="ccd8aa6cf01889e91345fd74fbe1ebb8">
+							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Entender cómo se representan los números</li>
+<li>Comprender qué es una base</li>
+<li>Aplicar esto al sistema binario</li>
+<li>Aprender a convertir entre sistemas</li>
+</ul>
+							</div>
+						</div></section></section><section class="stack" data-id="00828f162590aab87fe749bd46c7d718"><section data-background="#173363" data-id="f63777a44878a6368b542ff5a870f247"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="e1d5d72a53eb19e5d4b0bf6fdecc01f8"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 10;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="1b35122d960dff3efa68ddd29e3550a1">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="8a60a2a0a224da116a4bd6b7565bec1a"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 288px;" data-name="Text 1" data-block-id="9a07c40f3d959a93b7697ba88e4f35cc">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 15; color: rgb(238, 238, 238);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Representación de números</h1></div>
+						</div></section><section data-id="f2ba801b09a4741de313f71f9ac4c561"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 230.5px;" data-block-id="dd79840615feff0a25ab911757340f2f">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Cómo representamos números?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 293.5px;" data-block-id="5303d5b71e51beb75bc4fbce0953ae7a">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Usamos símbolos organizados en posiciones.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="949bca4b86b0d7db8159c56cc060e46f">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Ejemplo:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="3ac0a8a0b12acb64208d30fe0190e8f7">
+							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>9240</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 440.5px;" data-block-id="666cc62a23c1881235458c834d34fc06">
+							<div class="sl-block-content" style="text-align: left; z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Cada dígito tiene un valor según su posición.</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="88aac6819456d97e546283778b85f7ae"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 15;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="339526053b777c42ecba4899a7c49b1f"><div class="sl-block-content" style="z-index: 16;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="0f30e922cf9602d005095e8b488743da">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 17;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="cf53554446ba7e01120c15784957470a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 265px;" data-block-id="bd9db47f11cc835d54f48d7876fad6ff">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Sistema decimal</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 328px;" data-block-id="215074c752beb928b3e51f2295c4f74e">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Utiliza 10 símbolos: 0–9</li>
+<li>Base: 10</li>
+<li>Sistema posicional</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="74b0c46e98ceb91627c56727326068ed"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="d4fb8902a9cf3d501e03e0f67f372f82"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="5cb511759f02a1915e0368e7dfa0c2b0">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="ca69a7c191b310c4cdd655493dd2f43f"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279.5px;" data-block-id="3ba3c6e436bc7f7e4ee7942e956eafd3">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Valor posicional</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="5a2a2fa1cb2e9c76063303d8d13f258e">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Cada posición representa una potencia de 10:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="732365265cad135c4dd3f40b3473cb02">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>... 10³ 10² 10¹ 10⁰</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="e458d4661d4662f5573bcaf2f9be71b5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="7c189c5bbe2ffcda3362620ce4cf382c"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="fe0a7523ff82c8753acf62df09b527ff">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="b8574d6886f835c1524c1707c5841edb"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 221px;" data-block-id="c4c68645f5e3487647d388e22a141667">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejemplo</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284px;" data-block-id="f5a9cc23fcccca009886ec9a39d12133">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>9240 =</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 797px; left: 216px; top: 284px; height: auto;" data-block-id="dac4e2c28d22e078ff3cc68a50d45539">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p>&nbsp; &nbsp;9 × 10³</p>
+
+<p>+ 2 × 10²</p>
+
+<p>+ 4 × 10¹</p>
+
+<p>+ 0 × 10⁰</p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="447ef18f398026903f002dbd28fdec92"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="fa0cd86a5eb0cce45ec15bd215bd59c1"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="1395516f3a84d4c7651be221b662abbb">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="b8cb025a1f1756e7f1ae06c6796e6bb8"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 201.5px;" data-block-id="63d6984023ff068d438196861d333110">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Números con decimales</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 264.5px;" data-block-id="0418634fe91ea13092e8c80ce2d46c36">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>480.52 =</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 829px; left: 240px; top: 264.5px; height: auto;" data-block-id="60d4e123292de65483f5b7852814e299">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p>&nbsp; &nbsp;4 × 10²</p>
+
+<p>+ 8 × 10¹</p>
+
+<p>+ 0 × 10⁰</p>
+
+<p>+ 5 × 10⁻¹</p>
+
+<p>+ 2 × 10⁻²</p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="716b57f02d4e198d18c514cc0c6add65"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="bd11382c5893b5a0b7b7d9b070aa0452"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="c1dc55c0df1dfd48b9a0757e9827f544">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="dcf68db5f670b5ba5106d49b1c2f51d4"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279.5px;" data-block-id="33c89c473480491612430c8f15a9031e">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Idea clave</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="8848021efd4e07a0ab0f54d7237d54b5">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Un número es:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="f692fed70da67539eb1bf6b932354bc2">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>👉 suma de (dígito × potencia de la base)</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="120235bc70708ac3268d18a6c7a14833"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="94315ae8ba89f0eccf28d61bb913b23c"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="7a5929efcae9f0159f31cfc5461ec7fe">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="55cf8dab61127422050c49afb973402f"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 240.5px;" data-block-id="af890eccca0786fe747f5653cef5df62">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Generalización</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 303.5px;" data-block-id="90845e20a08daae4f328afb8b3d17918">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Todo sistema de numeración tiene:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 352.5px;" data-block-id="eed84c3a71808773564b5f7a41fa6fbb">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>una base B</li>
+<li>dígitos (0 a B-1)</li>
+<li>pesos posicionales (potencias de B)</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="2cd8a108a10b8563a69f7496ba917588"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="178eeb7a8aaf5de82c8120bccf05153e"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="7d19eb7d05b6b326f1dd82428c5055e2">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="5fdd2ee65a7370d4e5c457f4f1189bbd"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 304px;" data-block-id="7bbaadebcca7d0f1509461125328c78d">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Pregunta</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 367px;" data-block-id="9c847d50d1b80344245ca386beec2bcd">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>¿Qué pasaría si cambiamos la base?</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="0e9cd653e76480c7c686c915f31a5b6c"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="38c9806ffb9877dc7888fd60d9db36bb"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="35585d7c9b0bad95e4b51a05895d5c33">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="d1cdc1ebf3e386e1a34ef0aec142feea"><section data-background="#173363" data-id="23deda213d337254fd877458095f4216"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="7f7065dc24755871f1ce4db9d0d66ba6"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 10;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="af3961c86cf298080533140720a1a490">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="58f22234ab872f8a58ecc175db7a70ba"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 288px;" data-name="Text 1" data-block-id="120e926c85a2c84732a356b5242d2954">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 15; color: rgb(238, 238, 238);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Sistema binario</h1></div>
+						</div></section><section data-id="4274983ddc1dd4888758ed447dc99b59"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284.5px;" data-block-id="fe26b851e152c90070353dcb040f31e1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Sistema binario</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 347.5px;" data-block-id="05ef189e4355569f7c73f7462da96d1e">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Base: 2</li>
+<li>Dígitos: 0 y 1</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="d317b8d84ddfed5907f3cf81f6a38dcd"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="3f24cefc267b5395f812e7da8940ef09"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="e8d7dd744dcd5a263317af5440c4b9da">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="717834e643f1ce9792fc7d50c842aeaf"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 304px;" data-block-id="735ace5e2a6de8ab25bf2b0437a29dc4">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Pesos en binario</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 367px;" data-block-id="59669ab0b137888187738c1dfbb3d25d">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>... 2³ 2² 2¹ 2⁰</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="ce5897f4af5df3b9847d6554cbd1cf00"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 648.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 619.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="c9bc6c7c42f49b507664d72a01084aa9"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 623.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="4f0f71df1bfb6598c9eeaca92c0bac74">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="0b97985e73783e0a6ea60adf6780aea0"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 240.5px;" data-block-id="b19022489d38d2d204bd49fc835aca9e">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejemplo</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 303.5px;" data-block-id="2035753102012c98045f741fc9472bfb">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>101₂ =</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 710px; left: 217px; top: 303.5px; height: auto;" data-block-id="54049e0a0c0bcc86cbcf41190134b0a8">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p>&nbsp; &nbsp;1 × 2²</p>
+
+<p>+ 0 × 2¹</p>
+
+<p>+ 1 × 2⁰</p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="ae4cbee13e7cacecbbe2d243fe97d3cd"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="15511feb90102c77166f9d7b51261411"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="ee8f77b70937291db9e6150613c9d38f">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="f49e7154cc29b2749795059c27d57ae9"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284.5px;" data-block-id="ab83b8c9920b1a4ddb55f05a393734d7">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Equivalencias</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 347.5px;" data-block-id="4dbab4d5d7b3caf88fa7e5597577d41c">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>5 = 101₂<br>9 = 1001₂  </p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4453e8527ea5a68e61d6e960ab32aa3a"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="df60e5f408d8990aefd83588d53e17fe"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="4630ff47d2568b9f77e246763b6e52f6">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="d9246b3f2775665274b3f2e9fe403797"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 260px;" data-block-id="186eaf4a97f0779a74694f4ee342d2ed">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Por qué binario?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 323px;" data-block-id="28400ca7377efb0c057c7b99aae244f9">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Porque los sistemas electrónicos trabajan con dos estados:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 372px;" data-block-id="1805f88ee944827de9272b0208bae1dd">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>apagado / encendido</li>
+<li>falso / verdadero</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="53b35cf14beb32862286e69511e5da44"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="e4e27a41be9459d6827caf81f4d32e94"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="c178b01b4a280f0679b35fa75c354cad">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="ee132e4c6269c6c82a1384a662adf5ec"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 260px;" data-block-id="78368e71eb10ba8adec0addd384ec878">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Conexión con hardware</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 323px;" data-block-id="5781be888c1326f4914fa9035007450b">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>El binario permite representar información usando:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 372px;" data-block-id="2d59aed332d4109825334b4d10fcf175">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>voltaje presente → 1  </li>
+<li>voltaje ausente → 0</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="5c96c62f21f6c947a45445b975ac5509"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="7e917c47cedd00056b5b8e4cb83b15e2"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="8cfbbd139feabc7c5d7fffe09a9a12ac">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="682b9fbc55a125e363ef564104f7ff28"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279.5px;" data-block-id="77672bb715cec7bf70686c429dedc302">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Idea clave</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="318489c66dbf1c783cd2f93702109947">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>El binario no es “raro”</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="04941c9f993e042b0b71d1efe84ca054">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>👉 es el mismo concepto que decimal, pero en base 2</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="3a053e62fa2f015cf879347cf7b9c0ac"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="dad69c4c2d5f8b2e8fb65b10fd6a9058"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="d018d1f963a376bbf898177c805869da">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="a31a89c0114b34828f52f0a6bf4ae424"><section data-background="#173363" data-id="e084091ff350fbf5233b136b6d278170"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4e4676faab20d4f494909ac59e4d607e"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 10;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="55172f9f8b801a6a7ae70cec3f2cd183">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="0a5f51dd47e64b8e505586da3ed434f0"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 288px;" data-name="Text 1" data-block-id="8394bbadceaf494e657f5bbf71e91cd9">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 15; color: rgb(238, 238, 238);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Conversión entre sistemas</h1></div>
+						</div></section><section data-id="226a6a0036d178c260008d4ae864abda"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 304px;" data-block-id="b600551196bad0e8c9026e09063eb549">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Problema práctico</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 367px;" data-block-id="e44f050d1f5886369ae59dce984c28b9">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>¿Cómo pasamos de decimal a binario?</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4f9d7ebbca647025a2d553e968ff005a"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="0447c60dbd2cdfae3e6eafa27bef215e"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="ab7fcc213a1387fab69f1c37a182fc2d">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="cf3b46bc6885ed173a2b93f331dc4d2e"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 265px;" data-block-id="0a4d73a8eef6d51cf2a4a7cf3dcc2fc8">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Método (enteros)</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 328px;" data-block-id="f1d2953ef9c0158465b72e74ec42e208">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>dividir por 2</li>
+<li>guardar el resto</li>
+<li>repetir con el cociente</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="86f0535e1d43eed11ca966c62831edbb"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="d8708a9888001c8482518f3ff7bf18da"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="b812e2c5fd2355d62939ecf578f8eafa">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="750cea035dbf98c8f8a5c83c8aeeeb7a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 221px;" data-block-id="86548b97d4abaeb4db74b3c255a76dc8">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejemplo: 12</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284px;" data-block-id="0856fccca38482397dd8cb099118524d">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text"><p>12 ÷ 2 → resto 0<br>
+&nbsp; 6 ÷ 2 → resto 0<br>
+&nbsp; 3 ÷ 2 → resto 1<br>
+&nbsp; 1 ÷ 2 → resto 1</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 450px;" data-block-id="4f2e1d80b035fa22fd5b28d80072fe69">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Resultado: 1100₂</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="3377bfa1c6b0b5fd20b506b126223a4b"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 648.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 619.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="e6996dc35fcdd98b9de0f12a052f704f"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 623.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="32876c98a696fe19e507ae9f40a4b52e">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="6e83fddc7d750b4f7524f2c941d78fcb"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279.5px;" data-block-id="8a455c7e00bb5a483cd61b81ce21538c">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Orden de lectura</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="af8616b22f95eef92d68b778e06a5579">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Los restos se leen:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="19bbd70c2368c042676530ea5a54f1e3">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>👉 de abajo hacia arriba</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="122ffd2363eccf51937f8312349fbbea"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="103fde7b0c3b7f95bfc8fb6e91a446f5"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="d3295b61399b3bebb2e47395dece97b0">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="25d85485cc4da725cf20bbd431c7a610"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279.5px;" data-block-id="6d63b6d6e6f2490e4993bf4d9950b8f9">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejercicio guiado</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 342.5px;" data-block-id="83704e6476940c3ff9124fe3bf4db816">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Convertir:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 391.5px;" data-block-id="41ca802e2e2c9dd223afc4ff7cf2ea16">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>123 → binario</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="aaeb5559ed791e0bd90982e6ff5b4388"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="8478bb1b9e1f4410747aff3276498ab9"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="c6874d5d32fa4840652d9ec0f1618fe2">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="27265a86992bba9556b13571776989a0"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 240.5px;" data-block-id="ee68d45cac1b5682185f10a3d827a0a4">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Fracciones</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 303.5px;" data-block-id="4898930e891dcd8baef2f29e1abf7a7d">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Método:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 352.5px;" data-block-id="8ee020b58cc6de439b7613db975c7110">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>multiplicar por 2</li>
+<li>tomar la parte entera</li>
+<li>repetir</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="228f36c3fe71afa29751f405142d3adc"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="0919ebb7c30052b8de8c80b17e46f227"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="42641de619fc20d4035de6de8175d787">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="64d62a11a63c3d09bdc44b1f809f74fa"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 240.5px;" data-block-id="2e1842db954db791c60a01bf8613fa43">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejemplo</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 303.5px;" data-block-id="afc9e9d9440648030c3b03e2d6a584ca">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text"><p>0.625 × 2 = 1.25 → 1<br>
+0.25 &nbsp; × 2 = 0.5 &nbsp; → 0<br>
+0.5 &nbsp; &nbsp; × 2 = 1.0 &nbsp; → 1</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 430.5px;" data-block-id="f102efbbb902a3ba3a9c6ec1484176a8">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Resultado: 0.101₂</p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="00f02277baa077e7a296f439c31e8bc0"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="d7d6a65b817e7dfd07d2e0a587bbfdf0"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="7c878e0915403ab22fa0248073136ff2">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="cb6f349f152c1118f3747b4b924cd71b"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284.5px;" data-block-id="b96212eacd05f9300925692aae15de64">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Idea operativa</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 347.5px;" data-block-id="1b9d4f44441b1601e6c1f632424c9788">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>dividir → enteros  </li>
+<li>multiplicar → fracciones</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="3caeed04a23d9ca074b98d9dd23db12c"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="cf4299ebf788345fe1c549d634f6dbc6"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="d740164833814a80d28fa20a7a40328e">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section data-id="b924a298f46305f7ec551e036c8f7c4d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245.5px;" data-block-id="d9f22626d4bfb21bb129474f3658ab17">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Resumen</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 308.5px;" data-block-id="f19ba51f9997b5a497e87dbee93fbb1f">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Los números se representan con bases</li>
+<li>El decimal es base 10</li>
+<li>El binario es base 2</li>
+<li>Podemos convertir entre sistemas</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="c9c513c4d62f80af0907394dd42aab7e"><div class="sl-block-content sl-block-group-content" style="transform-origin: 627.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 48.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="cbddebc0707e193a7fc7a5e8345b0cec"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="eead3ad0bf7ff242f00fb207038e1930">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="4d6b0b0bb73e7e49d7ea5a91958c8771" data-visibility="hidden"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 304px;" data-block-id="6ed24b236b6084090d396f1f73ed11f3">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Pregunta final</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 367px;" data-block-id="f1d1092bed9989e49a5cd8c5c788d4b0">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text"><p>¿Por qué se usa sistema binario en computadoras?</p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="eb8c1ed02ca5035184690b1a5d04ec8a"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="2e5f22da51d0af2cdffa76b81455f3c1" data-block-id="f4846865e2a7d812d8fc5d82d0f40565"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="b643520b3e33ed22494725d64aa52a17" data-block-id="76c89c8941eb12173f84bb1d4909400a">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="2e4b0a5263b5e93b758847967147da9e"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 60.665313px; height: auto;" data-name="Text 1" data-block-id="16503f24c9efd8fe4899efef5ea574e8"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(28, 69, 135);" data-placeholder-text="Text">
+<h2>Sobre esta presentación</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 271px; top: 381.536px;" data-name="text-27db9d" data-block-id="156fccad41337c567499e4c49cee7549"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span class="cc-license-title">Atribución 4.0 Internacional</span> <span class="cc-license-identifier"> (CC BY 4.0)</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 204.5px; top: 517.536px;" data-name="text-db0ec3" data-block-id="4fe6d5a18f9ed1f19cb6242384b908aa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>https://creativecommons.org/licenses/by/4.0/deed.es</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 403.201px; height: 142.144px; left: 369.4px; top: 201.464px; min-width: 1px; min-height: 1px;" data-name="image-8c317e" data-block-id="85635c94c6443a291303505ba229dbd4"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1024" data-natural-height="361" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/629e702a93cfe2d12007b2168f0fefa3.png"></div></div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="05dded8febfc4320cc3b7293b3b48d83"><div class="sl-block-content sl-block-group-content" style="transform-origin: 627.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 48.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-block-id="2e5f22da51d0af2cdffa76b81455f3c1"><div class="sl-block-content" style="z-index: 17;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u2-sistemas-numeracion-sistema-binario/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 622.5px; height: auto;" data-name="Text 3" data-block-id="b643520b3e33ed22494725d64aa52a17">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":3551802,"slug":"u2-sistemas-numeracion-sistema-binario","title":"U2: Sistemas de numeración y sistema binario","description":"Template","width":1280,"height":720,"margin":0.05,"visibility":"all","published_at":"2026-03-19T19:37:16.646Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/7fcc41f5127bb40873e7600694bde144/thumb.jpg?1773956797","view_count":53,"user":{"id":254814,"username":"pilasguru","name":"Rodolfo Pilas","description":"bloger podcaster devops sysadmin profesor father","thumbnail_url":"https://www.gravatar.com/avatar/e66077df231d7db5c93b563a23b3f6c7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"lite","team_id":null,"settings":{"id":71201,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":31,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1773957678126,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"es","source_deck_id":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>
