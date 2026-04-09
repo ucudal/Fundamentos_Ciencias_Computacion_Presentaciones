@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "U3: Git + Markdown"}' />
+		<title>U3: Git + Markdown</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="86a3f0a0cc48"><section data-background="#173363" data-id="78a4b1c2b207"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 167px;" data-name="Text 1" data-block-id="16d06c087aa3">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10; color: rgb(238, 238, 238);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Unidad 3</h1></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="0a8ff7fdef75"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="8408390d2ee7">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="d7f095cadad6"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1078px; left: 101px; top: 356px; height: auto;" data-name="Text 4" data-block-id="f6414fa0de4c">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 16; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Control de cambios y documentación técnica</h2></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 256px;" data-name="Text 2" data-block-id="a2d70aae81fc">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h1>Git + Markdown</h1>
+							</div>
+						</div></section><section data-id="ffd5af1c6193"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="45430d420523">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Objetivos del tema</h2></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 182px;" data-block-id="48ed7b6b62ca">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; line-height: 1.56;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>Entender qué problema resuelve Git</li>
+<li>Comprender el flujo básico de trabajo local</li>
+<li>Trabajar con ramas y merge</li>
+<li>Resolver conflictos simples</li>
+<li>Conocer el papel de GitHub y SSH</li>
+<li>Escribir documentación simple en Markdown</li>
+<li>Integrar Git + Markdown en un entregable</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="e4c9eabc146e"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="f07ff3181b23"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="4e83de4a2c63">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="2de0df64f992"><section data-background="#173363" data-id="fc9d9e59c89c"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="5ac9a9100222"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="42509866bc88">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="25e3434f788d"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 253px;" data-name="Text 2" data-block-id="588c23d7fc72">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>1. El problema</h1></div>
+						</div></section><section data-id="0253341a40dc"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="60a459e524c1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Por qué necesitamos control de versiones?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 255px;" data-block-id="9e5b65db3531">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>Varias personas editan archivos</li>
+<li>Hay errores y cambios no deseados</li>
+<li>A veces necesitamos volver atrás</li>
+<li>Hace falta saber quién cambió qué</li>
+<li>Hace falta trabajar sin pisarnos</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="d9a2ca6da831"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="971a0043a752"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="249e79020ca5">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="1d8e9e2cb062"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="0a3e8a92852e">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Qué es un VCS?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 216px;" data-block-id="3ff172c2d93d">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Un sistema de control de versiones:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 290px;" data-block-id="5128485d78d5">
+							<div class="sl-block-content" style="text-align: left; z-index: 12; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>registra cambios en el tiempo</li>
+<li>permite recuperar versiones anteriores</li>
+<li>ayuda a colaborar</li>
+<li>conserva historia y trazabilidad</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="9afa3552a07b"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="7a366dc2c241"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="8355b6fe3c8d">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="84b37f0238a2"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 91px;" data-block-id="fe58b357994f">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Qué es Git?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245px;" data-block-id="ce59e8f5aad6">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>Sistema de control de versiones distribuido</li>
+<li>Gratuito y de código abierto</li>
+<li>Creado para gestionar cambios de forma robusta</li>
+<li>Cada repositorio tiene su propia historia completa</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4b319ff5e016"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="2159f327a6b9"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="c4f8afde22cc">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="7a9396deddcf"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="01c620aa2d34">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Idea clave: snapshots</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 232.863392px;" data-block-id="68043cc38ef9">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Git trabaja con snapshots:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 301.5px;" data-block-id="5b62447ce1d3">
+							<div class="sl-block-content" style="text-align: left; z-index: 12; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>cada commit registra una “foto” del estado</li>
+<li>no pensamos en “guardar archivo”</li>
+<li>pensamos en “guardar estado del proyecto”</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="98a2052df38a"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="ef6571e7fbf1"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="d1bf66e9fd15">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="490a468b7b63"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 91px;" data-block-id="7cb5a1cb1c8a">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Git no es GitHub</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 279px;" data-block-id="ee80b4384f74">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; line-height: 1.82;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li><strong>Git</strong>: herramienta de control de versiones</li>
+<li><strong>GitHub</strong>: plataforma para alojar repositorios Git</li>
+<li>Se puede usar Git sin GitHub</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="6c558d41a206"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="1f9a12aed4e4"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="56caaae28ce8">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="2dd515527a65"><section data-background="#173363" data-id="59e11e32dbc5"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="af72ac82a9f5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="c7758e590c12">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="aa238fce0a26"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 256px;" data-name="Text 2" data-block-id="f58648c2cc1b">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>2. Modelo mental de Git</h1></div>
+						</div></section><section data-id="2aefab03eb51"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 19px;" data-block-id="557a506c7f91">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Los tres estados</h2>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="aad83b036fed"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 11;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="b7a174dd3c66"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="a0204cbc6eb1">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 261.830141px; top: 312.363345px;" data-name="Line 1" data-block-id="37f7d6966b60"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 513.238967px; top: 312.363345px;" data-name="Line 2" data-block-id="182c35f425e4"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 764.238967px; top: 339px;" data-name="Line 3" data-block-id="70ecc1bf6338"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="236.7897010841043" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="236.7897010841043" viewBox="0 0 1 236.7897010841043"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666 4 4.027231071865666" stroke-linecap="round" d="M0 0 L0 236.79"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 236.79"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 236.79"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 1017.647793px; top: 312.363345px;" data-name="Line 4" data-block-id="31472984a611"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 284.84522px; top: 360.087313px;" data-name="Line 5" data-block-id="ffbec4f48172"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="209.40730878601155" data-line-y2="0" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 29;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="209.40730878601155" height="1" viewBox="0 0 209.40730878601155 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M0 0 L207.407 0"></path><path stroke="#ff0000" stroke-width="2" d="M 202.655 -6 L 208.655 0 L 202.655 6 L 208.655 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L209.407 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L209.407 0"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 521.245116px; top: 398.932366px;" data-name="Line 6" data-block-id="77ce03df12e9"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="234.27465650599083" data-line-y2="0" data-line-color="rgb(255, 0, 0)" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 30;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="234.27465650599083" height="1" viewBox="0 0 234.27465650599083 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="rgb(255, 0, 0)" stroke-width="2" stroke-linecap="round" d="M0 0 L232.275 0"></path><path stroke="rgb(255, 0, 0)" stroke-width="2" d="M 227.523 -6 L 233.523 0 L 227.523 6 L 233.523 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L234.275 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L234.275 0"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 774.292892px; top: 426.678833px;" data-name="Line 7" data-block-id="3b25f300faee"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="233.11226827646803" data-line-y2="0" data-line-color="rgb(255, 0, 0)" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 31;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="233.11226827646803" height="1" viewBox="0 0 233.11226827646803 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="rgb(255, 0, 0)" stroke-width="2" stroke-linecap="round" d="M0 0 L231.112 0"></path><path stroke="rgb(255, 0, 0)" stroke-width="2" d="M 226.36 -6 L 232.36 0 L 226.36 6 L 232.36 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L233.112 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L233.112 0"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 271.525883px; top: 477.732332px;" data-name="Line 8" data-block-id="855167be7ebd"><div class="sl-block-content" data-line-x1="485.0092701835708" data-line-y1="0" data-line-x2="0" data-line-y2="5.939650502871038e-14" data-line-color="rgb(255, 0, 0)" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 32;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="485.0092701835708" height="1" viewBox="0 0 485.0092701835708 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="rgb(255, 0, 0)" stroke-width="2" stroke-linecap="round" d="M485.009 0 L2 0"></path><path stroke="rgb(255, 0, 0)" stroke-width="2" d="M 6.752 6 L 0.752 0 L 6.752 -6 L 0.752 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M485.009 0 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M485.009 0 L0 0"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 522px; top: 539.732332px;" data-name="Line 9" data-block-id="7a129eb44db5"><div class="sl-block-content" data-line-x1="488.3430460690518" data-line-y1="0" data-line-x2="0" data-line-y2="5.980477482543327e-14" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 33;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="488.3430460690518" height="1" viewBox="0 0 488.3430460690518 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M488.343 0 L2 0"></path><path stroke="#ff0000" stroke-width="2" d="M 6.752 6 L 0.752 0 L 6.752 -6 L 0.752 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M488.343 0 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M488.343 0 L0 0"></path></svg></div></div><div class="sl-block" data-block-type="text" style="width: 124.980491px; height: auto; left: 327.058629px; top: 321.087313px;" data-name="Text 11" data-block-id="647ee3980288"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 34; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">add</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 248.704413px; height: auto; left: 653.591174px; top: 501.232332px;" data-name="Text 12" data-block-id="040f7e38b690"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 35; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">staged for commit (add)</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 124.980491px; height: auto; left: 408.540709px; top: 438.932366px;" data-name="Text 13" data-block-id="f7ee1ff2e780"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 36; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">deleted</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 124.980491px; height: auto; left: 575.238967px; top: 360.087313px;" data-name="Text 14" data-block-id="f582d58af539"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 37; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">commit</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 124.980491px; height: auto; left: 828.509754px; top: 387.678833px;" data-name="Text 15" data-block-id="72a70db37034"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 38; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">(edit)</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 676.113239px; height: 517.5px; left: 427.886761px; top: 84px;" data-name="Text 6" data-block-id="b540dee0b17b" data-text-layout="fixed"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 16; color: rgb(34, 34, 34); background-color: rgb(204, 204, 204); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>Tracked (en git)</p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 427.886761px; top: 186.988728px;" data-name="Text 1" data-block-id="e5489e37abc6"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 17; color: rgb(238, 238, 238); background-color: rgb(106, 168, 79); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>Staged</p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 176.477935px; top: 186.988728px;" data-name="Text 5" data-block-id="82daaa1a3eea"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 18; color: rgb(238, 238, 238); background-color: rgb(170, 170, 170); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>untracked</p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 679.591174px; top: 186.988728px;" data-name="Text 2" data-block-id="69b4f04e299f"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 19; color: rgb(238, 238, 238); background-color: rgb(106, 168, 79); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>Commited</p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 931.295587px; top: 186.988728px;" data-name="Text 4" data-block-id="808cfa75685d"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 20; color: rgb(238, 238, 238); background-color: rgb(106, 168, 79); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>Modified</p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 176.477935px; top: 264.988728px;" data-name="Text 7" data-block-id="c3533e79b4cc"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 21;" data-placeholder-text="Text"><p style="text-align: center;"><span style="font-size:0.8em">archivo nuevo</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 427.886761px; top: 264.988728px;" data-name="Text 8" data-block-id="3775edd23a44"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 22;" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.8em">preparado</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 679.591174px; top: 264.988728px;" data-name="Text 9" data-block-id="fb443f912968"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 23; line-height: 1.04;" data-has-line-height="" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.8em">guardado en historia</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 172.704413px; height: auto; left: 931.295587px; top: 264.988728px;" data-name="Text 10" data-block-id="da3f1d65e3fe"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 24;" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.8em">cambiado</span></p></div></div></section><section data-id="bbf3f25f17fc"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="84dc6d5ba58b" data-name="Text 1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Las tres áreas</h2>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4dc5d239b4b1"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 11;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="a17c4db375d4"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 5" data-origin-id="0be870aaf7a8" data-block-id="839ceb7715da">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 271.481834px; height: auto; left: 278.481835px; top: 180.836642px;" data-name="Text 6" data-block-id="c9f50b9805cc"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 14; color: rgb(238, 238, 238); background-color: rgb(230, 145, 56); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>working directory</p></div></div><div class="sl-block" data-block-type="text" style="width: 271.481834px; height: auto; left: 614.769011px; top: 180.836642px;" data-name="Text 7" data-block-id="0171c969acc0"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 15; color: rgb(238, 238, 238); background-color: rgb(60, 120, 216); line-height: 2.6;" data-has-line-height="" data-placeholder-text="Text"><p>staging area</p></div></div><div class="sl-block" data-block-type="text" style="width: 271.481834px; height: auto; left: 935.518166px; top: 180.836642px;" data-name="Text 8" data-block-id="00000d16b322"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 16; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-style: solid; border-width: 1px;" data-placeholder-text="Text"><p>.git directory<br>
+(Repository)</p></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 414.222751px; top: 276.163358px;" data-name="Line 1" data-block-id="132659899f64"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 750.509927px; top: 276.163358px;" data-name="Line 2" data-block-id="2214613d95fd"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 1071.259082px; top: 276.163358px;" data-name="Line 3" data-block-id="85dde9869638"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="1.176776447045331e-14" data-line-y2="263.21317821900135" data-line-color="#666666" data-line-width="2px" data-line-start-type="none" data-line-end-type="none" data-line-style="dashed-rounded" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="263.21317821900135" viewBox="0 0 1 263.21317821900135"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#666666" stroke-width="2" stroke-dasharray="4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792 4 4.100411819343792" stroke-linecap="round" d="M0 0 L0 263.213"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 263.213"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 263.213"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 424.52474px; top: 351.628197px;" data-name="Line 4" data-block-id="4e0012c6eaec"><div class="sl-block-content" data-line-x1="635.9964527904224" data-line-y1="7.788710201788615e-14" data-line-x2="0" data-line-y2="0" data-line-color="#ff0000" data-line-width="4px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="635.9964527904224" height="1" viewBox="0 0 635.9964527904224 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="4" stroke-linecap="round" d="M635.996 0 L4 0"></path><path stroke="#ff0000" stroke-width="4" d="M 10.256 9 L 1.256 0 L 10.256 -9 L 1.256 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M635.996 0 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M635.996 0 L0 0"></path></svg></div></div><div class="sl-block" data-block-type="text" style="width: 190.244271px; height: auto; left: 431.52474px; top: 310.628197px;" data-name="Text 11" data-block-id="d3d9a5c96a99"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 21; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">checkout project</span></p></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 424.52474px; top: 438.098585px;" data-name="Line 5" data-block-id="1bb5ec45464d"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="323.04683508273547" data-line-y2="0" data-line-color="#ff0000" data-line-width="4px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 24;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="323.04683508273547" height="1" viewBox="0 0 323.04683508273547 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="4" stroke-linecap="round" d="M0 0 L319.047 0"></path><path stroke="#ff0000" stroke-width="4" d="M 312.791 -9 L 321.791 0 L 312.791 9 L 321.791 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L323.047 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L323.047 0"></path></svg></div></div><div class="sl-block" data-block-type="text" style="width: 127.753955px; height: auto; left: 614.769011px; top: 399.269948px;" data-name="Text 12" data-block-id="c4b2e0b96c52"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 22; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">stage files</span></p></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 754.509927px; top: 502.098585px;" data-name="Line 6" data-block-id="16179a6feac3"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="311.87" data-line-y2="0" data-line-color="#ff0000" data-line-width="4px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="311.87" height="1" viewBox="0 0 311.87 1"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="4" stroke-linecap="round" d="M0 0 L307.87 0"></path><path stroke="#ff0000" stroke-width="4" d="M 301.614 -9 L 310.614 0 L 301.614 9 L 310.614 0" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L311.87 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L311.87 0"></path></svg></div></div><div class="sl-block" data-block-type="text" style="width: 102.005437px; height: auto; left: 958.515755px; top: 463.098585px;" data-name="Text 13" data-block-id="f98ff8981bd9"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 23; color: rgb(60, 120, 216);" data-placeholder-text="Text"><p style="text-align:center"><span style="font-size:0.7em">commit</span></p></div></div><div class="sl-block" data-block-type="text" style="width: 103.893176px; height: auto; left: 80px; top: 350.769946px;" data-name="Text 2" data-block-id="79a6943332a8"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: right; z-index: 26; color: rgb(102, 102, 102);" data-placeholder-text="Text"><p>Flujo de trabajo</p></div></div><div class="sl-block" data-block-type="text" style="width: 127.723923px; height: auto; left: 181.250759px; top: 185px;" data-name="Text 3" data-block-id="a06714db9427"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 27; font-size: 500%; color: rgb(204, 204, 204);" data-placeholder-text="Text"><p><span style="font-size:2.0em">{</span></p></div></div></section><section data-id="53840145abc0"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="b9465daa3f57">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Comandos mínimos del flujo básico</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 211px; height: auto;" data-block-id="a784f5e898fb">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git init
+git status
+git add .
+git commit -m "mensaje"
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="12a9bb122a80"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="e64086ba7ce7"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="98c7a2fcca65">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="c6d4ee27151d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="780620500e54">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Primer ejemplo local</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 193px; height: auto;" data-block-id="720b5f0435fd">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git init
+echo "Hola Git" &gt; archivo.txt
+git status
+git add archivo.txt
+git commit -m "Primer commit"
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="5df3b168d432"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="6fdd297a732e"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="eb86278fefd4">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="07fd61c0a16f"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="00796c74bdad">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Observar cambios</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 229px; height: auto;" data-block-id="7f82fa767dd3">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git status
+git diff
+git log --oneline
+</code></pre>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 412.481661px;" data-block-id="d52f52835b60">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li><code>status</code> muestra el estado actual</li>
+<li><code>diff</code> muestra diferencias</li>
+<li><code>log</code> muestra historia</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="059cb95e38cf"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="7ea2cb07a919"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="d11a6b4f730b">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="53a08ae9972d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 72px;" data-block-id="2500466f8f73">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Buenas prácticas iniciales</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 242.302827px;" data-block-id="5545b3eb400f">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>commits pequeños</li>
+<li>mensajes claros</li>
+<li>revisar antes de confirmar</li>
+<li>no acumular muchos cambios mezclados</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="0e873e7c1748"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="8b137e4171f4"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="6ce99a2a1508">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="71d1e91b4ee6"><section data-background="#173363" data-id="9c265eec037e"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="38909bdef41d"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="5b69f4293eb3">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="d6659eda8c14"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 256px;" data-name="Text 2" data-block-id="266aa7d15222">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>3. Trabajo en paralelo</h1></div>
+						</div></section><section data-id="6c71eb12db08"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="b0d03bc97ef6">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Qué es una rama?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 404.698864px; left: 117.650568px; top: 152.5px; height: auto;" data-block-id="353e375e623b">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Una rama es una línea de trabajo independiente.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 238.220064px; left: 117.650568px; top: 288px; height: auto;" data-block-id="7029634f3a5b">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Sirve para:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 464.376138px; left: 117.650568px; top: 337px; height: auto;" data-block-id="69a47b022b6a">
+							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>probar cambios</li>
+<li>trabajar en paralelo</li>
+<li>no romper la rama principal</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="b2ea07dd1976"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="49752a205a8c"><div class="sl-block-content" style="z-index: 17;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="ed76ffde5fe0">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="image" style="width: 641.347516px; height: 364.298621px; left: 592px; top: 144.850689px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="3501c12a26f9"><div class="sl-block-content" style="z-index: 19;"><img class="" data-natural-width="1551" data-natural-height="881" data-lazy-loaded="" data-src="u3-git-markdown/a705480785f8ffd8f95e0350f78f5aa2.png"></div></div><div class="sl-block" data-block-type="text" style="width: 71.893176px; height: auto; left: 520.106824px; top: 230.5px;" data-name="Text 1" data-block-id="9e812679d00a"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 20; color: rgb(61, 133, 198);" data-placeholder-text="Text"><p>main</p></div></div><div class="sl-block" data-block-type="text" style="width: 115.946588px; height: auto; left: 582.026706px; top: 317.5px;" data-name="Text 2" data-block-id="e32abd9fabb4"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 21; color: rgb(106, 168, 79);" data-placeholder-text="Text"><p>develop</p></div></div></section><section data-id="ca10fd360c8a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="9706946e29d1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Crear y usar una rama</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 201.269011px; height: auto;" data-block-id="c63f66cfa0bb">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git branch
+git checkout -b feature-x
+</code></pre>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 311.269011px;" data-block-id="ccee05382913">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Luego:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 360.269011px; height: auto;" data-block-id="0dd351b968ae">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 13;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git add .
+git commit -m "Agrega cambio en feature-x"
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="30f3c04d05c9"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="e7c21abfc2eb"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="0960e4ab2b36">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="0e2b5c471a7e"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="26b984741a5b">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Integrar cambios: merge</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 216px; height: auto;" data-block-id="1123453d7dc4">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">git checkout main
+git merge feature-x
+</code></pre>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 358.5px;" data-block-id="52b0642a8815">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Si no hay solapamiento: merge limpio</li>
+<li>Si hay solapamiento: posible conflicto</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="6dbcf85d6096"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="1d6ebc5f4fc3"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="c054f2e5b2d1">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="248879e16d80"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="da7ac2b40f7d">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Conflicto de merge</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 196.5px;" data-block-id="3af42072988a">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Git muestra marcas como estas:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 265px; height: auto;" data-block-id="345d12b78242">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 12;">
+								<pre class="text" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+versión actual
+=======
+versión de la otra rama
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-x
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="702e59f44b77"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="29abd301a13b"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="0634b08c8b06">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="a230c4dcbfa7"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="b0d297811271">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Idea clave sobre conflictos</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 216px;" data-block-id="29ef15cfa0bd">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Un conflicto significa:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 288px;" data-block-id="dd3ca8db85a4">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>dos cambios incompatibles</li>
+<li>en la misma zona del proyecto</li>
+<li>que requieren una decisión consciente</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="9528a2dd3c95"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="90e9b45feee8"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="4a65ba63f361">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section class="stack" data-id="cecc7bfcc765"><section data-background="#173363" data-id="a635de6b6efd"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="4e3e56c48c74"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="b444528d0c3a">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="394d654d505c"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 253px;" data-name="Text 2" data-block-id="8ad9e655a4b3">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>4. Onboarding técnico (tarea)</h1></div>
+						</div></section><section data-id="9c919cac0490" data-background-color="rgb(0, 0, 0)"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="da98ae2f4a43" data-name="Text 1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Bienvenido/a&nbsp;</h2></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 620.011445px; left: 80px; top: 163.5px; height: auto;" data-block-id="a2f1259745cc" data-name="Text 2">
+							<div class="sl-block-content" style="text-align: left; z-index: 11; color: rgb(255, 255, 255);" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Formas parte del equipo de desarrollo de:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 288px; height: auto;" data-block-id="dfebc3d8d01a" data-name="Text 4">
+							<div class="sl-block-content" style="text-align: left; z-index: 13; color: rgb(255, 255, 255);" data-placeholder-tag="p" data-placeholder-text="Text"><p>Sistema documental académico en construcción</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 720px; left: 80px; top: 362.5px; height: auto;" data-block-id="cf7ca871d5ac" data-name="Text 5">
+							<div class="sl-block-content" style="text-align: left; z-index: 14; color: rgb(255, 255, 255);" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Tu rol:
+<strong>Desarrollador/a junior</strong></p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 436px;" data-block-id="9c2a80df7341" data-name="Text 6">
+							<div class="sl-block-content" style="text-align: left; z-index: 15; color: rgb(255, 255, 255);" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Tienes por delante <strong>5 misiones</strong>.<br>Si las completas correctamente, obtendrás <strong>90 puntos</strong> y avanzarás a:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 537px;" data-block-id="58acc615c48c" data-name="Text 7">
+							<div class="sl-block-content" style="text-align: left; z-index: 16; color: rgb(255, 255, 255);" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p><strong>Junior Level 0.1</strong></p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="31010d96bbba"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 17;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 8" data-origin-id="b444528d0c3a" data-block-id="2c42f46823a7">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-origin-id="394d654d505c" data-block-id="e2b6713bedab"><div class="sl-block-content" style="z-index: 19;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="image" style="width: 453.954912px; height: 453.954912px; left: 826.045088px; top: -3px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-block-id="b696184d6735"><div class="sl-block-content" style="z-index: 20;"><img class="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="u3-git-markdown/e1a48e619a0ff4a194fafe294012b4d2.png"></div></div></section><section data-id="44fd48c472bd"><div class="sl-block" data-block-type="text" style="width: 240px; left: 80px; top: 45.5px; height: auto;" data-block-id="231b70f61407">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 11;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Reglas:</h2></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 672.291004px; left: 80px; top: 143.5px; height: auto;" data-block-id="85884068f391">
+							<div class="sl-block-content" style="text-align: left; z-index: 12; line-height: 1.43;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<ul>
+<li>Cada integrante trabaja en su <strong>clon local del repositorio</strong>  </li>
+<li>Desde <code>main</code>, crea su <strong>propia rama</strong>  </li>
+<li>Todos trabajan sobre el mismo archivo  </li>
+<li>Pero en <strong>secciones distintas</strong></li>
+</ul>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 825.118442px; left: 227.440779px; top: 560.5px; height: auto;" data-block-id="01523a3f5fb7">
+							<div class="sl-block-content" style="text-align: left; z-index: 13; color: rgb(255, 0, 0);" data-placeholder-tag="p" data-placeholder-text="Text"><p>Esto no es un ejercicio: es una simulación de trabajo real</p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="e105af768255"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="d53ba1852123"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="f2492c5d5b69">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 592px; left: 640px; top: 435.5px; height: auto;" data-block-id="79cd2eff122f" data-name="Text 2">
+							<div class="sl-block-content" style="text-align: left; z-index: 17; line-height: 1.43; font-size: 80%;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<p>✔ Trabajo prolijo y commits claros → <strong>bonificaciones</strong><br>✔ Buen uso de ramas → <strong>bonificaciones</strong><br>✔ Integración sin errores → <strong>bonificaciones</strong></p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 530.90745px; left: 80px; top: 435px; height: auto;" data-block-id="07f132c3db64" data-name="Text 4">
+							<div class="sl-block-content" style="text-align: left; z-index: 18; line-height: 1.43; font-size: 80%;" data-placeholder-tag="p" data-placeholder-text="Text" data-has-line-height="">
+								<p>✘ Cambios desordenados → <strong>penalización</strong><br>✘ Mensajes de commit pobres → <strong>penalización</strong><br>✘ Romper el trabajo de otros → <strong>penalización</strong></p>
+							</div>
+						</div><div class="sl-block" data-block-type="image" style="width: 467.712435px; height: 467.712435px; left: 812.287565px; top: 0px;" data-name="Image 1" data-block-id="cf1d0e8ff151"><div class="sl-block-content" style="z-index: 10;"><img class="" data-natural-width="1350" data-natural-height="1350" data-src="u3-git-markdown/a6a979603841de332095a7d3adb0f68b.png"></div></div><div class="sl-block" data-block-type="text" style="width: 374.312665px; left: 857.687335px; top: 0px; height: auto;" data-block-id="7031fd482e81" data-name="Text 1">
+							<div class="sl-block-content" style="text-align: center; z-index: 19; color: rgb(60, 120, 216);" data-placeholder-tag="p"><p><span style="font-size:1.0em">https://qrco.de/bgjPWM</span></p></div>
+						</div></section><section data-id="79982d303139" data-transition="none"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="24976b013bc5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="97260f691b99"><div class="sl-block-content" style="z-index: 16;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 7" data-origin-id="0be870aaf7a8" data-block-id="e0356e9b4546">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 17;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 512px; left: 80px; top: 90.571837px; height: auto;" data-block-id="4f0f25ade55a" data-name="Text 9">
+							<div class="sl-block-content" style="text-align: left; z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>No se trata solo de “que funcione”.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 480px; left: 80px; top: 177px; height: auto;" data-block-id="f158be3956c5" data-name="Text 10">
+							<div class="sl-block-content" style="text-align: left; z-index: 19;" data-placeholder-tag="p" data-placeholder-text="Text"><p>Se trata de demostrar que puedes trabajar:</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 504.586144px; left: 80px; top: 258px; height: auto;" data-block-id="b10a282c46e6" data-name="Text 11">
+							<div class="sl-block-content" style="text-align: left; z-index: 20; line-height: 1.43;" data-placeholder-tag="p" data-has-line-height="" data-placeholder-text="Text"><ul>
+	<li>ser parte de un equipo</li>
+	<li>seguir buenas prácticas</li>
+	<li>utilizar Git de forma profesional</li>
+</ul></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 256px; left: 80px; top: 7px; height: auto;" data-block-id="2b6e2e7e28af" data-name="Text 8">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 21;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Tu desafío</h2></div>
+						</div></section><section data-transition="none" data-id="6a2960b0c010"><div class="sl-block" data-block-type="text" style="width: 364.743952px; left: 640px; top: 7px; height: auto;" data-name="Text 1" data-block-id="ed6746a73552">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Objetivo final</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 566.659152px; left: 633.340848px; top: 90.571837px; height: auto;" data-name="Text 2" data-block-id="b26173b6cb9f">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Tu trabajo impacta directamente en el proyecto.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 566.659152px; left: 633.340848px; top: 177px; height: auto;" data-name="Text 3" data-block-id="8f91656d3055">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p>Es tu oportunidad de demostrar lo que puedes hacer para que<br>
+<strong>Campus U1 funcione y crezca correctamente</strong></p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="98380ff115d4"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 16;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-block-id="031ce0dc5eec"><div class="sl-block-content" style="z-index: 19;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 7" data-block-id="6f69d5ebc0fb">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 20;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 7px;" data-name="Text 8" data-block-id="d6e847342be8">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 21;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Tu desafío</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 512px; left: 80px; top: 90.571837px; height: auto;" data-name="Text 9" data-block-id="d36d80b20c7a">
+							<div class="sl-block-content" style="text-align: left; z-index: 22;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>No se trata solo de “que funcione”.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 480px; left: 80px; top: 177px; height: auto;" data-name="Text 10" data-block-id="91d148c2be87">
+							<div class="sl-block-content" style="text-align: left; z-index: 23;" data-placeholder-tag="p" data-placeholder-text="Text"><p>Se trata de demostrar que puedes trabajar:</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 504.586144px; left: 80px; top: 258px; height: auto;" data-name="Text 11" data-block-id="e57fd95334e2">
+							<div class="sl-block-content" style="text-align: left; z-index: 24; line-height: 1.43;" data-placeholder-tag="p" data-has-line-height="" data-placeholder-text="Text"><ul>
+	<li>ser parte de un equipo</li>
+	<li>seguir buenas prácticas</li>
+	<li>utilizar Git de forma profesional</li>
+</ul></div>
+						</div></section><section data-transition="none" data-id="5c0f728b8d0c"><div class="sl-block" data-block-type="text" style="width: 364.743952px; left: 640px; top: 7px; height: auto;" data-name="Text 1" data-block-id="5b0a318ee9de">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Objetivo final</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 566.659152px; left: 633.340848px; top: 90.571837px; height: auto;" data-name="Text 2" data-block-id="366109f9cae8">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Tu trabajo impacta directamente en el proyecto.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 566.659152px; left: 633.340848px; top: 177px; height: auto;" data-name="Text 3" data-block-id="55d926b0cad3">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p>Es tu oportunidad de demostrar lo que puedes hacer para que<br>
+<strong>Campus U1 funcione y crezca correctamente</strong></p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 374.596723px; left: 222.3255px; top: 438.291555px; height: auto;" data-name="Text 4" data-block-id="b09a4bc2c6ec">
+							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>En este equipo valoramos:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 294.822856px; left: 602.851644px; top: 399.291555px; height: auto;" data-name="Text 5" data-block-id="83d56f6121de">
+							<div class="sl-block-content" style="text-align: left; z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>claridad  </li>
+<li>orden  </li>
+<li>responsabilidad</li>
+</ul>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1038.428163px; left: 120.785918px; top: 548.5px; height: auto;" data-name="Text 6" data-block-id="1b40e3895dfa">
+							<div class="sl-block-content" style="text-align: left; z-index: 15; color: rgb(255, 0, 0);" data-placeholder-tag="p" data-placeholder-text="Text"><p><strong>Esperamos que tu trabajo marque una diferencia real en el proyecto</strong></p></div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="371d62ddbcd5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 16;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-block-id="3c9bd6518b78"><div class="sl-block-content" style="z-index: 19;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 7" data-block-id="818dbaf512a3">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 20;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 7px;" data-name="Text 8" data-block-id="0be640f357bd">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 21;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Tu desafío</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 512px; left: 80px; top: 90.571837px; height: auto;" data-name="Text 9" data-block-id="d644c037404d">
+							<div class="sl-block-content" style="text-align: left; z-index: 22;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>No se trata solo de “que funcione”.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 480px; left: 80px; top: 177px; height: auto;" data-name="Text 10" data-block-id="584c2ff7b75a">
+							<div class="sl-block-content" style="text-align: left; z-index: 23;" data-placeholder-tag="p" data-placeholder-text="Text"><p>Se trata de demostrar que puedes trabajar:</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 504.586144px; left: 80px; top: 258px; height: auto;" data-name="Text 11" data-block-id="961a1e9553b1">
+							<div class="sl-block-content" style="text-align: left; z-index: 24; line-height: 1.43;" data-placeholder-tag="p" data-has-line-height="" data-placeholder-text="Text"><ul>
+	<li>ser parte de un equipo</li>
+	<li>seguir buenas prácticas</li>
+	<li>utilizar Git de forma profesional</li>
+</ul></div>
+						</div></section></section><section class="stack" data-id="088f79268350"><section data-background="#173363" data-id="40e81c386905"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="af6a854e798c"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="49bdd5477563">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="0512bf88babf"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 253px;" data-name="Text 2" data-block-id="400385a19d38">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>5. Remotos, Github y SSH</h1></div>
+						</div></section><section data-id="d92bf0cf7bcb"><div class="sl-block" data-block-type="text" style="width: 520.124165px; left: 91.374664px; top: 84.363392px; height: auto;" data-block-id="010b67e625de">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Qué es un remoto?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 346.371976px; left: 91.374664px; top: 180px; height: auto;" data-block-id="a74c5e8f3d34">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p"><p>Un remoto es una copia del repositorio en red</p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 353.369853px; left: 92.370999px; top: 293.730989px; height: auto;" data-block-id="5d9397e92225">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Permite:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 353.369853px; left: 92px; top: 350.5px; height: auto;" data-block-id="b6ae9b6f07f3">
+							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>compartir trabajo</li>
+<li>respaldar historia</li>
+<li>colaborar a distancia</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="11c827b7a98d"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="56bb844de2d7"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="d0978e1eb662">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="image" style="width: 438.915612px; height: 246.5px; left: 516.146471px; top: 293.730989px;" data-name="Image 1" data-block-id="bcffc04b9a5e"><div class="sl-block-content" style="z-index: 17;"><img class="" data-natural-width="844" data-natural-height="474" data-src="u3-git-markdown/7a024eda608acc7193e378c95333e580.png"></div></div><div class="sl-block" data-block-type="shape" style="width: 101.787349px; height: 101.787349px; left: 684.710603px; top: 516.972741px;" data-name="Shape 1" data-block-id="6ff4e023b07a"><div class="sl-block-content" data-shape-type="symbol-user" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 32"><g class="shape-element" fill="#000000" data-viewbox="0 0 24 32"><path d="M12 16c-6.625 0-12 5.375-12 12 0 2.211 1.789 4 4 4h16c2.211 0 4-1.789 4-4 0-6.625-5.375-12-12-12zM6 6c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6-3.314 0-6-2.686-6-6z"></path></g></svg></div></div><div class="sl-block" data-block-type="shape" style="width: 101.787349px; height: 101.787349px; left: 1069.83156px; top: 520.712651px;" data-name="Shape 2" data-block-id="95c2c7ee34fa"><div class="sl-block-content" data-shape-type="symbol-user" data-shape-fill-color="#000000" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 24 32"><g class="shape-element" fill="#000000" data-viewbox="0 0 24 32"><path d="M12 16c-6.625 0-12 5.375-12 12 0 2.211 1.789 4 4 4h16c2.211 0 4-1.789 4-4 0-6.625-5.375-12-12-12zM6 6c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6-3.314 0-6-2.686-6-6z"></path></g></svg></div></div><div class="sl-block" data-block-type="text" style="width: 567px; height: auto; left: 640px; top: 84.363392px;" data-name="Text 1" data-block-id="ba0415172ce0"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: center; z-index: 20; background-color: rgb(204, 204, 204); line-height: 1.95;" data-has-line-height=""><p>Git remote</p></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 768px; top: 143.5px;" data-name="Line 1" data-block-id="d6bacef66c0c"><div class="sl-block-content" data-line-x1="0" data-line-y1="151.36759700000005" data-line-x2="0" data-line-y2="0" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="line-arrow" data-line-end-type="none" data-line-style="solid-rounded" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="151.36759700000005" viewBox="0 0 1 151.36759700000005"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M0 149.368 L0 0"></path><path stroke="#ff0000" stroke-width="2" d="M -6 144.616 L 0 150.616 L 6 144.616 L 0 150.616" stroke-linecap="round" stroke-linejoin="round" class="line-start"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 151.368 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 151.368 L0 0"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 815.99103px; top: 143.867597px;" data-name="Line 2" data-block-id="441917bf6c5c"><div class="sl-block-content" data-line-x1="0" data-line-y1="151.367597" data-line-x2="0" data-line-y2="0" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="151.367597" viewBox="0 0 1 151.367597"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M0 151.368 L0 2"></path><path stroke="#ff0000" stroke-width="2" d="M -6 6.752 L 0 0.752 L 6 6.752 L 0 0.752" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 151.368 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 151.368 L0 0"></path></svg></div></div><div class="sl-block" data-block-type="text" style="width: 80.542194px; height: auto; left: 684.710603px; top: 200.051395px;" data-name="Text 2" data-block-id="436255998883"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 23; color: rgb(60, 120, 216);"><p>clone</p></div></div><div class="sl-block" data-block-type="text" style="width: 80.542194px; height: auto; left: 824.552795px; top: 200.051395px;" data-name="Text 4" data-block-id="51486cd36986"><div class="sl-block-content" data-placeholder-tag="p" style="text-align: left; z-index: 24; color: rgb(60, 120, 216);"><p>push</p></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 1102.112174px; top: 143.867597px;" data-name="Line 3" data-block-id="fe69d0cc959c"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="354.365" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="354.365" viewBox="0 0 1 354.365"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M0 0 L0 352.365"></path><path stroke="#ff0000" stroke-width="2" d="M 6 347.613 L 0 353.613 L -6 347.613 L 0 353.613" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 0 L0 354.365"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 0 L0 354.365"></path></svg></div></div><div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 1138.338295px; top: 146.377353px;" data-name="Line 4" data-block-id="c973ce5b316c"><div class="sl-block-content" data-line-x1="0" data-line-y1="351.85524399999997" data-line-x2="0" data-line-y2="0" data-line-color="#ff0000" data-line-width="2px" data-line-start-type="none" data-line-end-type="line-arrow" data-line-style="solid-rounded" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="351.85524399999997" viewBox="0 0 1 351.85524399999997"><path class="line-element" fill="rgba(0,0,0,0)" stroke="#ff0000" stroke-width="2" stroke-linecap="round" d="M0 351.855 L0 2"></path><path stroke="#ff0000" stroke-width="2" d="M -6 6.752 L 0 0.752 L 6 6.752 L 0 0.752" stroke-linecap="round" stroke-linejoin="round" class="line-end"></path><path class="line-skeleton" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" d="M0 351.855 L0 0"></path><path class="line-hitarea" fill="rgba(0,0,0,0)" stroke="rgba(0,0,0,0)" stroke-width="15" d="M0 351.855 L0 0"></path></svg></div></div></section><section data-id="6be1e768efca"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="1fdf2aae799c">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Operaciones remotas básicas</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 142.428163px; top: 254.143675px; height: auto;" data-block-id="0ec371634e15">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px; tab-size: 4;"><code data-line-numbers="">git clone URL
+git remote -v
+
+git push origin main</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="663e6cef8be0"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="e5a33e11d886"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="429cbb44ba0d">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="85db7030da41"><div class="sl-block" data-block-type="text" style="width: 646.648053px; left: 80px; top: 72px; height: auto;" data-block-id="8b47d185d414">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Autenticación con SSH</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 152.321165px;" data-block-id="a7697750aa02">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Pasos básicos:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 191.321165px;" data-block-id="59aa818e0f74">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ol>
+<li>crear cuenta en GitHub</li>
+<li>generar una clave SSH</li>
+<li>registrar la clave pública en GitHub</li>
+<li>usar la URL SSH del repositorio</li>
+</ol>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="0cad6762be12"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 13;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="c4d123272b49"><div class="sl-block-content" style="z-index: 14;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="609f00e8d26a">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 380.5px;" data-block-id="f5c4f4892ac3" data-name="Text 1">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 16;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Generar una clave SSH</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 452px; height: auto;" data-block-id="51e63f45f596" data-name="Code 1">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 17;">
+								<pre class="bash" style="font-size: 30px; line-height: 36px;"><code data-line-numbers="">ssh-keygen -t ed25519 -C "tu@email.com"
+</code></pre>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 520.469045px;" data-block-id="5db32a622f85" data-name="Text 2">
+							<div class="sl-block-content" style="text-align: left; z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Luego copiar la clave pública y agregarla en GitHub.</p>
+							</div>
+						</div></section></section><section class="stack" data-id="9249d6f0115f"><section data-background="#173363" data-id="a73119123434"><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="8f0ff5b0b957"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628px 648px; z-index: 11;"><div class="sl-block" data-block-type="text" style="width: 806px; left: 400px; top: 623px; height: auto;" data-name="Text 3" data-block-id="29a7c42a2f16">
+							<div class="sl-block-content" style="text-align: center; color: rgb(238, 238, 238); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div><div class="sl-block" data-block-type="image" style="width: 220px; height: 57.037037px; left: 50px; top: 619.481481px; min-width: 1px; min-height: 1px;" data-name="Image 1" data-block-id="762a265e1823"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="218" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/2d1072d4606ff5bde6f3857db47a4acd.svg"></div></div></div></div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 101px; top: 256px;" data-name="Text 2" data-block-id="5143d8d33b0b">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 17; color: rgb(255, 255, 255);" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>6. Markdown como contenido versionable</h1></div>
+						</div></section><section data-id="9a8625a11571"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="57abd95944e6">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Qué es Markdown?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 185.509112px;" data-block-id="b4ce82c306de">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Markdown es una sintaxis simple para escribir texto estructurado.</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 264.5px;" data-block-id="8cff6e5e0846">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p>Se usa mucho para:</p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 313.5px;" data-block-id="20734cc88c65">
+							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>README</li>
+<li>documentación técnica</li>
+<li>apuntes</li>
+<li>manuales breves</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="ed25c1e37fa1"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="9cae8dc4d4bd"><div class="sl-block-content" style="z-index: 15;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="445540af5aba">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="f6559075359a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="eb08ebdf5b33">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Sintaxis básica</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 247px; height: auto;" data-block-id="3b33b082e140">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="markdown" style="font-size: 30px; line-height: 36px;"><code data-line-numbers=""># Título
+## Subtítulo
+- ítem
+**negrita**
+`código`
+[enlace](https://ejemplo.com)
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="48ff730d7f8c"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="f94b035b5e58"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="746cd229a9b8">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="719fd07e0f38"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 72px;" data-block-id="e4f118b9eb9c">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>¿Por qué Git y Markdown combinan bien?</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 282px;" data-block-id="7e23788cb5a0">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<ul>
+<li>Markdown es texto plano</li>
+<li>Git compara muy bien texto</li>
+<li>los cambios quedan claros</li>
+<li>la historia de la documentación se puede seguir</li>
+</ul>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="33f27ca7a6e5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="64df31528f05"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="84d4ca61866f">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="07208112a593"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 54.227622px;" data-block-id="b1576d97bd1b">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Ejemplo de README</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="code" style="width: 1024px; left: 128px; top: 144px; height: auto;" data-block-id="a42bf58aae49">
+							<div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" data-code-autoheight="true" style="z-index: 11;">
+								<pre class="markdown" style="font-size: 25px; line-height: 30px;"><code data-line-numbers=""># Proyecto Git
+
+## Integrantes
+- Nombre 1
+- Nombre 2
+
+## Qué hicimos
+Breve descripción del trabajo.
+
+## Problemas encontrados
+Resumen breve.
+
+## Cómo los resolvimos
+Resumen breve.
+</code></pre>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="ac6a4cbb6586"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 12;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="1a69ace49b87"><div class="sl-block-content" style="z-index: 13;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="f33e6606d3f9">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section></section><section data-id="f550ff8c3fb5"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 80px; top: 55.559943px;" data-block-id="eae02621c6be">
+							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h2>Materiales de apoyo</h2>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 151px;" data-block-id="ad5a026b1880">
+							<div class="sl-block-content" style="text-align: left; font-size: 90%; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h3>Conceptos de la unidad</h3>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 206px;" data-block-id="2642e8ac3ec5">
+							<div class="sl-block-content" style="text-align: left; z-index: 12; font-size: 70%;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p><a href="https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/unidad/3/git/readme/">https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/unidad/3/git/readme/</a></p>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 285.5px;" data-block-id="39572ebb416a">
+							<div class="sl-block-content" style="text-align: left; font-size: 90%; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h3>Repositorio gamificado</h3>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 127px; top: 331px;" data-block-id="4b6d92b9cfc5">
+							<div class="sl-block-content" style="text-align: left; z-index: 14; font-size: 90%;" data-placeholder-tag="p"><p><a href="https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Ejercicio_U3" target="_blank">https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Ejercicio_U3</a></p></div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 429px;" data-block-id="9cb81bcc8506">
+							<div class="sl-block-content" style="text-align: left; font-size: 90%; z-index: 15;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<h3>Referencia oficial de Git</h3>
+							</div>
+						</div><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 474px;" data-block-id="b2c4b7672f6a">
+							<div class="sl-block-content" style="text-align: left; z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text">
+								<p><a href="https://git-scm.com/doc">https://git-scm.com/doc</a></p>
+							</div>
+						</div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="c65d778ec459"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 17;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-origin-id="27fe0bc54c81" data-block-id="c3c5be6a3923"><div class="sl-block-content" style="z-index: 18;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-origin-id="0be870aaf7a8" data-block-id="619e9520c5c2">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 19;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section><section data-id="0a202cf2e9bd"><div class="sl-block" data-block-type="text" style="width: 864px; left: 80px; top: 60.665313px; height: auto;" data-name="Text 1" data-block-id="d7a3c3e01147"><div class="sl-block-content" data-placeholder-tag="h1" style="text-align: left; z-index: 10; color: rgb(28, 69, 135);" data-placeholder-text="Text">
+<h2>Sobre esta presentación</h2>
+</div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 271px; top: 381.536px;" data-name="text-27db9d" data-block-id="e04426fe2e88"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span class="cc-license-title">Atribución 4.0 Internacional</span> <span class="cc-license-identifier"> (CC BY 4.0)</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 711px; left: 204.5px; top: 517.536px;" data-name="text-db0ec3" data-block-id="c50cc6eaa0bc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 90%;">
+<p>https://creativecommons.org/licenses/by/4.0/deed.es</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 403.201px; height: 142.144px; left: 369.4px; top: 201.464px; min-width: 1px; min-height: 1px;" data-name="image-8c317e" data-block-id="a9723f60bdc3"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1024" data-natural-height="361" data-lazy-loaded="" data-src="u3-git-markdown/629e702a93cfe2d12007b2168f0fefa3.png"></div></div><div class="sl-block sl-block-group" data-block-type="group" data-name="Group 1" data-block-id="92f99fa8781e"><div class="sl-block-content sl-block-group-content" style="transform-origin: 628.25px 647.5px; z-index: 14;"><div class="sl-block" data-block-type="image" style="width: 221px; height: 57.479821px; left: 49.5px; top: 618.76009px; min-width: 1px; min-height: 1px;" data-name="Image 2" data-block-id="27fe0bc54c81"><div class="sl-block-content" style="z-index: 17;"><img class="" data-natural-width="222" data-natural-height="56" data-lazy-loaded="" data-src="u3-git-markdown/44a6cbabbfd98674e666fdf755dc6a37.svg"></div></div><div class="sl-block" data-block-type="text" style="width: 806px; left: 401px; top: 622.5px; height: auto;" data-name="Text 3" data-block-id="0be870aaf7a8">
+							<div class="sl-block-content" style="text-align: center; color: rgb(23, 51, 99); z-index: 18;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:0.9em">Fundamentos en Ciencias de la Computación</span></h3></div>
+						</div></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":3559204,"slug":"u3-git-markdown","title":"U3: Git + Markdown","description":"","width":1280,"height":720,"margin":0.05,"visibility":"all","published_at":"2026-04-08T23:12:03.912Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/0dd8d7c4ff8d74085153f81c77993ae0/thumb.jpg?1775698593","view_count":8,"user":{"id":254814,"username":"pilasguru","name":"Rodolfo Pilas","description":"bloger podcaster devops sysadmin profesor father","thumbnail_url":"https://www.gravatar.com/avatar/e66077df231d7db5c93b563a23b3f6c7?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"lite","team_id":null,"settings":{"id":71201,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":38,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1775746555637,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"en","source_deck_id":null,"notes":{"6e8df70ca969":"","ffd5af1c6193":"","78a4b1c2b207":"Abrir la unidad planteando que no vamos a ver Git como una lista de comandos, sino como una herramienta para controlar cambios y coordinar trabajo. Anticipar que Markdown aparecerá después como un contenido  que es ideal para versionar."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+
+	</body>
+</html>
